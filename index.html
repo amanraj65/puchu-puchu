@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>For My Puchu 💖</title>
+  <title>For You 💖</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
@@ -19,6 +19,7 @@
       font-family: 'Poppins', sans-serif;
       flex-direction: column;
       text-align: center;
+      transition: background 1s ease;
     }
 
     .gift-box {
@@ -90,7 +91,8 @@
   <img src="https://raw.githubusercontent.com/amanraj65/puchu-puchu/961586c51fd44302ba54de9eed48a53c74b95753/WhatsApp%20Image%202025-10-27%20at%2012.33.10%20PM.jpeg" 
        alt="Her Photo" class="photo" id="photo" />
   
-  <audio id="bg-music" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_bcf91d1e46.mp3?filename=lofi-study-112191.mp3"></audio>
+  <!-- Your custom song -->
+  <audio id="bg-music" src="https://raw.githubusercontent.com/amanraj65/puchu-puchu/main/Espresso.mp3" loop></audio>
 
   <script>
     const gift = document.getElementById('gift');
@@ -116,7 +118,7 @@
       message.style.display = 'block';
       message.innerHTML = '';
 
-      const text = '💖 “You’re the reason my Smile.”';
+      const text = '💖 “You’re the reason my code runs without errors.”';
       let i = 0;
       const typing = setInterval(() => {
         message.innerHTML += text.charAt(i);
@@ -129,6 +131,7 @@
         }
       }, 60);
 
+      music.volume = 0.5;
       music.play().catch(() => console.log("Autoplay blocked until click."));
 
       setInterval(createHeart, 400);
