@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1a1a1a, #2d0b52);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    img {
+      width: 85%;
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(255, 192, 203, 0.5);
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 1.6rem;
+      opacity: 0;
+      animation: fadeInText 3s ease 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .heart {
+      position: absolute;
+      bottom: 20px;
+      color: pink;
+      font-size: 2rem;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <img src="https://raw.githubusercontent.com/yourusername/love-page/main/photo.jpg" alt="Her Photo" />
+  <h1>💖 You’re the reason my code runs without errors.</h1>
+
+  <div class="heart">💗</div>
+
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_0a8e51b36a.mp3?filename=chill-lofi-112191.mp3" type="audio/mp3">
+  </audio>
+</body>
+</html>
